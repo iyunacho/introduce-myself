@@ -59,6 +59,14 @@ footer{
   text-align:center;
   padding: 26px 0;
 }
+
+a:hover{
+  text-decoration:none;
+  color:lightcoral;
+  cursor:pointer;
+}
+
+
 /* @charset "utf-8";
 html {
   font-size: 100%;

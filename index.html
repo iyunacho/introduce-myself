@@ -15,32 +15,51 @@
       <nav>
         <ul class = "navi">
           <li><a href="index.html">소개</a></li>
-          <li><a>html</a></li>
-          <li><a>css</a></li>
-          <li><a>JavaScript</a></li>
+          <li><a onclick="select('html')">html</a></li>
+          <li><a onclick="select('css')">css</a></li>
+          <li><a onclick="select('JavaScript')">JavaScript</a></li>
         </ul>
       </nav>
     </header>
-    <div class = "wrapper contents">풀씨 웹세미나입니다.</div>
+    <div class = "wrapper contents" id="content">풀씨 웹세미나입니다.</div>
     <aside>
         <ul class="aside_list">
-          <li>소개</li>
-          <li>html</li>
-          <li>css</li>
-          <li>JavaScript</li>
+          <li><a href="index.html">소개</a></li>
+          <li><a onclick="select('html')">html</a></li>
+          <li><a onclick="select('css')">css</a></li>
+          <li><a onclick="select('JavaScript')">JavaScript</a></li>
         </ul>
     </aside>
     <footer class = "wrapper">웹 세미나 문의: 010-5357-8001</footer>
-    <!-- <script>
+    <script>
         const content = document.getElementById('content');
-        const footer = document.getElementsByTagName("footer")[0];
-        footer.addEventListener("click",function(){
-            footer.innerText= "웹 세미나 문의 : 010-9893-3417";
-        });
-        const div = document.getElementsByTagName("div")[0];
-        div.addEventListener("click", function(){
-            div.innerText = "클릭 완";        
-        });
-    </script> -->
+        const js = '<div style="background-color: red;">JavaScript</div>';
+        const css = '<div style="background-color: blue;">css</div>';
+        const html = '<div style="background-color: yellow;">html</div>';
+
+        function select(page){
+          // alert(page);
+          switch(page){
+            case "html":
+              content.innerHTML = html;
+              break;
+            case 'css':
+              content.innerHTML = css;
+              break;
+            case 'JavaScript':
+              content.innerHTML = js;
+              break;
+          }
+        }
+        // const footer = document.getElementsByTagName("footer")[0];
+        // footer.addEventListener("click",function(){
+        //     footer.innerText= "웹 세미나 문의 : 010-9893-3417";
+        // });
+        // const div = document.getElementsByTagName("div")[0];
+        // div.addEventListener("click", function(){
+        //     div.innerText = "클릭 완";        
+        // });
+        // backtick 으로 했을 때 안의 변수 인식
+    </script>
   </body>
 </html>
